@@ -56,11 +56,11 @@ class _App extends React.Component<AppProps, AppState> {
   }
 }
 
+// const mapStateToProps = (state: StoreState): { todos: Todo[] } => {
+//   return {todos:  state.todos}
+// };
 const mapStateToProps = ({ todos }: StoreState): { todos: Todo[] } => {
   return { todos };
 };
 
-export const App = connect(
-  mapStateToProps,
-  { fetchTodos, deleteTodo }
-)(_App);
+export const App = connect(mapStateToProps, { fetchTodos, deleteTodo })(_App);
